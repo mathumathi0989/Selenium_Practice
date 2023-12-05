@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-03T13:44:09 EST" name="Default suite" finished-at="2023-12-03T13:44:21 EST" duration-ms="12786">
+  <suite started-at="2023-12-04T21:51:22 EST" name="Default suite" finished-at="2023-12-04T21:51:30 EST" duration-ms="8350">
     <groups>
     </groups>
-    <test started-at="2023-12-03T13:44:09 EST" name="Default test" finished-at="2023-12-03T13:44:21 EST" duration-ms="12786">
-      <class name="com.seleniumDec.AUTO_PRACTICE_FORM">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.seleniumDec.AUTO_PRACTICE_FORM@1d296da]" started-at="2023-12-03T13:44:09 EST" name="setup" finished-at="2023-12-03T13:44:10 EST" duration-ms="1945" status="PASS">
+    <test started-at="2023-12-04T21:51:22 EST" name="Default test" finished-at="2023-12-04T21:51:30 EST" duration-ms="8350">
+      <class name="com.seleniumDec.staticTable">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.seleniumDec.staticTable@48f2bd5b]" started-at="2023-12-04T21:51:22 EST" name="setup" finished-at="2023-12-04T21:51:24 EST" duration-ms="1490" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="automationForm()[pri:0, instance:com.seleniumDec.AUTO_PRACTICE_FORM@1d296da]" started-at="2023-12-03T13:44:10 EST" name="automationForm" finished-at="2023-12-03T13:44:21 EST" duration-ms="10215" status="PASS">
+        <test-method signature="iterate()[pri:0, instance:com.seleniumDec.staticTable@48f2bd5b]" started-at="2023-12-04T21:51:24 EST" name="iterate" finished-at="2023-12-04T21:51:30 EST" duration-ms="6565" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- automationForm -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.seleniumDec.AUTO_PRACTICE_FORM@1d296da]" started-at="2023-12-03T13:44:21 EST" name="tearDown" finished-at="2023-12-03T13:44:21 EST" duration-ms="593" status="PASS">
+        </test-method> <!-- iterate -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.seleniumDec.staticTable@48f2bd5b]" started-at="2023-12-04T21:51:30 EST" name="tearDown" finished-at="2023-12-04T21:51:30 EST" duration-ms="263" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.seleniumDec.AUTO_PRACTICE_FORM -->
+      </class> <!-- com.seleniumDec.staticTable -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
