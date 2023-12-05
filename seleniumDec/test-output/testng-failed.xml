@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.seleniumDec.staticTable">
+      <class name="com.seleniumDec.dynamicTable">
         <methods>
-          <include name="iterate"/>
+          <include name="dynamic_iterate"/>
           <include name="setup"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.seleniumDec.staticTable -->
+      </class> <!-- com.seleniumDec.dynamicTable -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
