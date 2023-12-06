@@ -9,10 +9,11 @@ import org.testng.annotations.Test;
 public class dynamicTable extends browserCl{
 
 	/*
-Verify that there are only 4 structure values present in the table with Selenium
-Verify that the 6th row of the table (Last Row) has only two columns with Selenium
-Find the tallest structure in the table with Selenium
-
+Verify that there are only 4 structure values present in the demo table
+Verify that Burj Khalifa has a height of 829m with Selenium
+ Verify that the last row (6th) of the table has only two columns with Selenium
+ Find the tallest structure in the table with Selenium
+ 
 	 */
 	@Test
 	public void dynamic_iterate() {
