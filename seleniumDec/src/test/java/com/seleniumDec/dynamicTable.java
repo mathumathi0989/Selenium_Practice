@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class dynamicTable extends browserCl{
@@ -15,9 +17,14 @@ Verify that Burj Khalifa has a height of 829m with Selenium
  Find the tallest structure in the table with Selenium
  
 	 */
-	@Test
-	public void dynamic_iterate() {
+@BeforeTest
+	public void browserURL() {
 		driver.get("https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html");
+		
+	}
+
+
+	public void dynamic_iterate() {
 		
 		//number of rows
 		List<WebElement> no_of_rows = driver.findElements(By.xpath("//table[@class='tsc_table_s13']//tr"));
@@ -37,11 +44,46 @@ Verify that Burj Khalifa has a height of 829m with Selenium
 				System.out.println();
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+
+		}	
+	}
+	
+	
+	public void verify_structure_values_4() {
+		//Verify that there are only 4 structure values present in the demo table
+		List<WebElement> struc = driver.findElements(By.xpath("//table[@class='tsc_table_s13']/tbody/tr/th"));
+		int count = 0;
+		for (int i=1; i<=struc.size(); i++) {
+		String struc_name = driver.findElement(By.xpath("//table[@class='tsc_table_s13']/tbody/tr["+i+"]/th")).getText();
+		count = count +1;
+		System.out.println(struc_name);
 		}
+		
+		System.out.println("Number of structures: " +count);
+		Assert.assertEquals(count, 4);
+	}
+	
+	
+	public void burj_height_verify() {
+		//Verify that Burj Khalifa has a height of 829m with Selenium
+	String actual_Height = driver.findElement(By.xpath("//table[@class='tsc_table_s13']/tbody/tr[1]/th/following-sibling::td[3]/span")).getText();
+	System.out.println(actual_Height);
+	String trim_Height = actual_Height.substring(0, actual_Height.length()-1);
+	Assert.assertEquals(trim_Height, "829");
+	
+	
+	}
+	
+	@Test
+	public void lastRow_ColnsVerify() {
+		// Verify that the last row (6th) of the table has only two columns with Selenium
+		
+		List<WebElement> lastRow = driver.findElements(By.xpath("//table[@class='tsc_table_s13']/tfoot/tr/child::*"));
+		int result = lastRow.size();
+		System.out.println("Number of columns in last row: " + result);
+		
+		Assert.assertEquals(2, result);
 		
 		
 	}
-	
 }
