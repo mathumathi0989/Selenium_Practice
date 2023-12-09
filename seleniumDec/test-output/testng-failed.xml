@@ -6,9 +6,8 @@
       <class name="com.seleniumDec.dynamicTable">
         <methods>
           <include name="setup"/>
-          <include name="lastRow_ColnsVerify"/>
           <include name="tearDown"/>
-          <include name="browserURL"/>
+          <include name="tallest"/>
         </methods>
       </class> <!-- com.seleniumDec.dynamicTable -->
     </classes>

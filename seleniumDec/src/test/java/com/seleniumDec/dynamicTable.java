@@ -17,7 +17,7 @@ Verify that Burj Khalifa has a height of 829m with Selenium
  Find the tallest structure in the table with Selenium
  
 	 */
-@BeforeTest
+
 	public void browserURL() {
 		driver.get("https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html");
 		
@@ -74,7 +74,7 @@ Verify that Burj Khalifa has a height of 829m with Selenium
 	
 	}
 	
-	@Test
+	
 	public void lastRow_ColnsVerify() {
 		// Verify that the last row (6th) of the table has only two columns with Selenium
 		
@@ -86,4 +86,35 @@ Verify that Burj Khalifa has a height of 829m with Selenium
 		
 		
 	}
+	@Test
+	public void tallest() {
+		// Find the tallest structure in the table with Selenium
+		driver.get("https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html");
+		
+		List<WebElement> height = driver.findElements(By.xpath("//table[@class='tsc_table_s13']/tbody//td[3]"));
+		int count_height = height.size();
+		System.out.println(count_height);
+		int count = 0;
+		String structure = "" ;
+		for(int i=1; i<=count_height; i++) {
+			
+		String before_Trim = driver.findElement(By.xpath("//table[@class='tsc_table_s13']/tbody/tr["+i+"]/td[3]")).getText();
+		
+		String value = before_Trim.substring(0,before_Trim.length()-1);
+		int valueInt = Integer.parseInt(value);
+		
+		if(valueInt>count)
+		{
+		count = valueInt;
+		 structure = driver.findElement(By.xpath("//table[@class='tsc_table_s13']/tbody/tr["+i+"]/td[3]//preceding-sibling::th")).getText();
+		}
+		
+		
+		}
+		System.out.println("Tallest structure's height is " +count);
+		System.out.println("Tallest structure is " + structure);
+		
+		
+	}
+	
 }
