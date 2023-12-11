@@ -8,7 +8,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class browserCl {
 
-	WebDriver driver;
+	 WebDriver driver;
 	
 	@BeforeTest
 	public void setup(){

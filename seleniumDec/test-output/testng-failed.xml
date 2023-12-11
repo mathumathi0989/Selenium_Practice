@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.seleniumDec.dynamicTable">
+      <class name="com.seleniumDec.brokenLinks">
         <methods>
+          <include name="openD"/>
           <include name="setup"/>
+          <include name="link"/>
           <include name="tearDown"/>
-          <include name="tallest"/>
         </methods>
-      </class> <!-- com.seleniumDec.dynamicTable -->
+      </class> <!-- com.seleniumDec.brokenLinks -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
