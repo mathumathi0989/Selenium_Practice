@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.seleniumDec.brokenLinks">
+      <class name="com.seleniumDec.eCommerceWeb">
         <methods>
-          <include name="openD"/>
+          <include name="addToCart"/>
           <include name="setup"/>
-          <include name="link"/>
           <include name="tearDown"/>
+          <include name="open"/>
         </methods>
-      </class> <!-- com.seleniumDec.brokenLinks -->
+      </class> <!-- com.seleniumDec.eCommerceWeb -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
