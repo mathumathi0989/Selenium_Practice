@@ -9,18 +9,14 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">10,180</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">31,171</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.seleniumDec.eCommerceWeb</td><td><a href="#m0">addToCart</a></td><td rowspan="1">1702411841800</td><td rowspan="1">456</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.seleniumDec.eCommerceWeb</td><td><a href="#m1">Login</a></td><td rowspan="1">1702411836118</td><td rowspan="1">3125</td></tr><tr class="passedeven"><td><a href="#m2">search</a></td><td rowspan="1">1702411839249</td><td rowspan="1">2549</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.seleniumDec.eCommerceWeb</td><td><a href="#m0">subtotal</a></td><td rowspan="1">1702495585033</td><td rowspan="1">2</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.seleniumDec.eCommerceWeb</td><td><a href="#m1">Login</a></td><td rowspan="1">1702495555731</td><td rowspan="1">8940</td></tr><tr class="passedeven"><td><a href="#m2">addToCart</a></td><td rowspan="1">1702495571332</td><td rowspan="1">13700</td></tr><tr class="passedeven"><td><a href="#m3">search</a></td><td rowspan="1">1702495564671</td><td rowspan="1">6658</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.seleniumDec.eCommerceWeb#addToCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [2] but found []
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.seleniumDec.eCommerceWeb.addToCart(eCommerceWeb.java:124)
+<h2>Default test</h2><h3 id="m0">com.seleniumDec.eCommerceWeb#subtotal</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Integer.parseInt(Integer.java:623)
+	at java.base/java.lang.Integer.parseInt(Integer.java:777)
+	at com.seleniumDec.eCommerceWeb.subtotal(eCommerceWeb.java:188)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -49,6 +45,7 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">com.seleniumDec.eCommerceWeb#Login</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.seleniumDec.eCommerceWeb#search</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.seleniumDec.eCommerceWeb#addToCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.seleniumDec.eCommerceWeb#search</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

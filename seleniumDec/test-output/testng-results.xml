@@ -1,42 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-12T15:10:32 EST" name="Default suite" finished-at="2023-12-12T15:10:42 EST" duration-ms="10180">
+  <suite started-at="2023-12-13T14:25:54 EST" name="Default suite" finished-at="2023-12-13T14:26:25 EST" duration-ms="31171">
     <groups>
     </groups>
-    <test started-at="2023-12-12T15:10:32 EST" name="Default test" finished-at="2023-12-12T15:10:42 EST" duration-ms="10180">
+    <test started-at="2023-12-13T14:25:54 EST" name="Default test" finished-at="2023-12-13T14:26:25 EST" duration-ms="31171">
       <class name="com.seleniumDec.eCommerceWeb">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.seleniumDec.eCommerceWeb@43bc63a3]" started-at="2023-12-12T15:10:32 EST" name="setup" finished-at="2023-12-12T15:10:34 EST" duration-ms="1750" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.seleniumDec.eCommerceWeb@1d296da]" started-at="2023-12-13T14:25:54 EST" name="setup" finished-at="2023-12-13T14:25:55 EST" duration-ms="1516" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="open()[pri:0, instance:com.seleniumDec.eCommerceWeb@43bc63a3]" started-at="2023-12-12T15:10:34 EST" name="open" finished-at="2023-12-12T15:10:36 EST" depends-on-methods="com.seleniumDec.browserCl.setup" duration-ms="2040" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- open -->
-        <test-method signature="Login()[pri:0, instance:com.seleniumDec.eCommerceWeb@43bc63a3]" started-at="2023-12-12T15:10:36 EST" name="Login" finished-at="2023-12-12T15:10:39 EST" duration-ms="3125" status="PASS">
+        <test-method signature="Login()[pri:0, instance:com.seleniumDec.eCommerceWeb@1d296da]" started-at="2023-12-13T14:25:55 EST" name="Login" finished-at="2023-12-13T14:26:04 EST" duration-ms="8940" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="search()[pri:1, instance:com.seleniumDec.eCommerceWeb@43bc63a3]" started-at="2023-12-12T15:10:39 EST" name="search" finished-at="2023-12-12T15:10:41 EST" duration-ms="2549" status="PASS">
+        <test-method signature="search()[pri:1, instance:com.seleniumDec.eCommerceWeb@1d296da]" started-at="2023-12-13T14:26:04 EST" name="search" finished-at="2023-12-13T14:26:11 EST" duration-ms="6658" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method signature="addToCart()[pri:2, instance:com.seleniumDec.eCommerceWeb@43bc63a3]" started-at="2023-12-12T15:10:41 EST" name="addToCart" finished-at="2023-12-12T15:10:42 EST" duration-ms="456" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="addToCart()[pri:2, instance:com.seleniumDec.eCommerceWeb@1d296da]" started-at="2023-12-13T14:26:11 EST" name="addToCart" finished-at="2023-12-13T14:26:25 EST" depends-on-methods="com.seleniumDec.eCommerceWeb.search" duration-ms="13700" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCart -->
+        <test-method signature="subtotal()[pri:3, instance:com.seleniumDec.eCommerceWeb@1d296da]" started-at="2023-12-13T14:26:25 EST" name="subtotal" finished-at="2023-12-13T14:26:25 EST" depends-on-methods="com.seleniumDec.eCommerceWeb.addToCart" duration-ms="2" status="FAIL">
+          <exception class="java.lang.NumberFormatException">
             <message>
-              <![CDATA[expected [2] but found []]]>
+              <![CDATA[Cannot parse null string]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [2] but found []
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at com.seleniumDec.eCommerceWeb.addToCart(eCommerceWeb.java:124)
+              <![CDATA[java.lang.NumberFormatException: Cannot parse null string
+at java.base/java.lang.Integer.parseInt(Integer.java:623)
+at java.base/java.lang.Integer.parseInt(Integer.java:777)
+at com.seleniumDec.eCommerceWeb.subtotal(eCommerceWeb.java:188)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -65,11 +61,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.NumberFormatException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addToCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.seleniumDec.eCommerceWeb@43bc63a3]" started-at="2023-12-12T15:10:42 EST" name="tearDown" finished-at="2023-12-12T15:10:42 EST" duration-ms="222" status="PASS">
+        </test-method> <!-- subtotal -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.seleniumDec.eCommerceWeb@1d296da]" started-at="2023-12-13T14:26:25 EST" name="tearDown" finished-at="2023-12-13T14:26:25 EST" duration-ms="308" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

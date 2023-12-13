@@ -8,7 +8,8 @@
           <include name="addToCart"/>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="open"/>
+          <include name="search"/>
+          <include name="subtotal"/>
         </methods>
       </class> <!-- com.seleniumDec.eCommerceWeb -->
     </classes>
