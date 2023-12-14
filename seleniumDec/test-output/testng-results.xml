@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-13T17:07:42 EST" name="Default suite" finished-at="2023-12-13T17:08:17 EST" duration-ms="35462">
+  <suite started-at="2023-12-14T14:18:19 EST" name="Default suite" finished-at="2023-12-14T14:18:54 EST" duration-ms="35058">
     <groups>
     </groups>
-    <test started-at="2023-12-13T17:07:42 EST" name="Default test" finished-at="2023-12-13T17:08:17 EST" duration-ms="35462">
+    <test started-at="2023-12-14T14:18:19 EST" name="Default test" finished-at="2023-12-14T14:18:54 EST" duration-ms="35058">
       <class name="com.seleniumDec.eCommerceWeb">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.seleniumDec.eCommerceWeb@7c7a06ec]" started-at="2023-12-13T17:07:42 EST" name="setup" finished-at="2023-12-13T17:07:44 EST" duration-ms="1824" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.seleniumDec.eCommerceWeb@7c7a06ec]" started-at="2023-12-14T14:18:19 EST" name="setup" finished-at="2023-12-14T14:18:22 EST" duration-ms="2966" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Login()[pri:0, instance:com.seleniumDec.eCommerceWeb@7c7a06ec]" started-at="2023-12-13T17:07:44 EST" name="Login" finished-at="2023-12-13T17:07:56 EST" duration-ms="11809" status="PASS">
+        <test-method signature="Login()[pri:0, instance:com.seleniumDec.eCommerceWeb@7c7a06ec]" started-at="2023-12-14T14:18:22 EST" name="Login" finished-at="2023-12-14T14:18:31 EST" duration-ms="8916" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="search()[pri:1, instance:com.seleniumDec.eCommerceWeb@7c7a06ec]" started-at="2023-12-13T17:07:56 EST" name="search" finished-at="2023-12-13T17:08:04 EST" duration-ms="8000" status="PASS">
+        <test-method signature="search()[pri:1, instance:com.seleniumDec.eCommerceWeb@7c7a06ec]" started-at="2023-12-14T14:18:31 EST" name="search" finished-at="2023-12-14T14:18:38 EST" duration-ms="7511" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method signature="addToCart()[pri:2, instance:com.seleniumDec.eCommerceWeb@7c7a06ec]" started-at="2023-12-13T17:08:04 EST" name="addToCart" finished-at="2023-12-13T17:08:17 EST" depends-on-methods="com.seleniumDec.eCommerceWeb.search" duration-ms="13371" status="PASS">
+        <test-method signature="addToCart()[pri:2, instance:com.seleniumDec.eCommerceWeb@7c7a06ec]" started-at="2023-12-14T14:18:38 EST" name="addToCart" finished-at="2023-12-14T14:18:51 EST" depends-on-methods="com.seleniumDec.eCommerceWeb.search" duration-ms="13038" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCart -->
-        <test-method signature="subtotal()[pri:3, instance:com.seleniumDec.eCommerceWeb@7c7a06ec]" started-at="2023-12-13T17:08:17 EST" name="subtotal" finished-at="2023-12-13T17:08:17 EST" depends-on-methods="com.seleniumDec.eCommerceWeb.addToCart" duration-ms="23" status="PASS">
+        <test-method signature="subtotal()[pri:3, instance:com.seleniumDec.eCommerceWeb@7c7a06ec]" started-at="2023-12-14T14:18:51 EST" name="subtotal" finished-at="2023-12-14T14:18:51 EST" depends-on-methods="com.seleniumDec.eCommerceWeb.addToCart" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- subtotal -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.seleniumDec.eCommerceWeb@7c7a06ec]" started-at="2023-12-13T17:08:17 EST" name="tearDown" finished-at="2023-12-13T17:08:17 EST" duration-ms="383" status="PASS">
+        <test-method signature="deleteCart()[pri:4, instance:com.seleniumDec.eCommerceWeb@7c7a06ec]" started-at="2023-12-14T14:18:51 EST" name="deleteCart" finished-at="2023-12-14T14:18:53 EST" depends-on-methods="com.seleniumDec.eCommerceWeb.subtotal" duration-ms="2275" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.seleniumDec.eCommerceWeb@7c7a06ec]" started-at="2023-12-14T14:18:53 EST" name="tearDown" finished-at="2023-12-14T14:18:54 EST" duration-ms="293" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

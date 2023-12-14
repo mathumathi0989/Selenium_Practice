@@ -20,8 +20,8 @@ public class eCommerceWeb extends browserCl {
 	By size = By.xpath("//div[@class='swatch-option text' and @index='2']");
 	By color = By.xpath("//div[@class='swatch-option color' and @index='1']");
 	int cart_price_in, cart_qty_in, cart_sub , cart_subtotal_in;
-	String ccart_qty, ccart_price,  ccart_subtotal,  ex_size , ex_color, cccart_price,  vval,vvalu,cccart_subtotal;
-
+	String ccart_qty, ccart_price,  ccart_subtotal,  ex_size , ex_color, cccart_price,  vval,vvalu,cccart_subtotal, del_text ;
+	String exp_del_text = "You have no items in your shopping cart.";
 	By signin = By.xpath("//div[@class='panel header']//a[contains(text(),'Sign In')]");
 	By email = By.id("email");
 	By pass = By.id("pass");
@@ -45,8 +45,9 @@ public class eCommerceWeb extends browserCl {
 	By cart_qty = By.xpath("//table[@id='shopping-cart-table']//span[@class='label']/following-sibling::input");
 	By cart_price = By.xpath("//table[@id='shopping-cart-table']//td[@class='col price']//span[@class='price']");
 	By cart_subtotal = By.xpath("//table[@id='shopping-cart-table']//td[@class='col subtotal']//span[@class='price']");
-	
-	
+	//delete item cart page
+	By cart_del = By.xpath("//div[@class='actions-toolbar']//a[@title='Remove item']");
+	By cart_del_text = By.xpath("//div[@class='cart-empty']/p[contains(text(),'no')]");
 	
 @Test(priority=0)
 	public void Login() throws Exception {
@@ -166,12 +167,14 @@ cccart_subtotal = vvalu.substring(1);
 }
 
 
-
+@Test(priority=4, dependsOnMethods = "subtotal")
 public void deleteCart() {
 /*
 Scenario 4: Delete the cart items
 	 */
-
+driver.findElement(cart_del).click();
+ del_text = driver.findElement(cart_del_text).getText();
+ Assert.assertEquals(del_text, exp_del_text);
 
 
 
