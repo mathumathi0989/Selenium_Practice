@@ -1,51 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="3" failed="1" skipped="1">
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-14T18:35:52 EST" name="Default suite" finished-at="2023-12-14T18:36:23 EST" duration-ms="31220">
+  <suite started-at="2023-12-15T20:41:42 EST" name="Default suite" finished-at="2023-12-15T20:42:29 EST" duration-ms="47607">
     <groups>
     </groups>
-    <test started-at="2023-12-14T18:35:52 EST" name="Default test" finished-at="2023-12-14T18:36:23 EST" duration-ms="31220">
+    <test started-at="2023-12-15T20:41:42 EST" name="Default test" finished-at="2023-12-15T20:42:29 EST" duration-ms="47607">
       <class name="com.seleniumDec.eCommerceWeb">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.seleniumDec.eCommerceWeb@75d4a5c2]" started-at="2023-12-14T18:35:52 EST" name="setup" finished-at="2023-12-14T18:35:54 EST" duration-ms="1632" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.seleniumDec.eCommerceWeb@75d4a5c2]" started-at="2023-12-15T20:41:42 EST" name="setup" finished-at="2023-12-15T20:41:45 EST" duration-ms="3085" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Login()[pri:0, instance:com.seleniumDec.eCommerceWeb@75d4a5c2]" started-at="2023-12-14T18:35:54 EST" name="Login" finished-at="2023-12-14T18:36:03 EST" duration-ms="8973" status="PASS">
+        <test-method signature="Login()[pri:0, instance:com.seleniumDec.eCommerceWeb@75d4a5c2]" started-at="2023-12-15T20:41:45 EST" name="Login" finished-at="2023-12-15T20:41:53 EST" duration-ms="8235" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="search()[pri:1, instance:com.seleniumDec.eCommerceWeb@75d4a5c2]" started-at="2023-12-14T18:36:03 EST" name="search" finished-at="2023-12-14T18:36:10 EST" duration-ms="7080" status="PASS">
+        <test-method signature="search()[pri:1, instance:com.seleniumDec.eCommerceWeb@75d4a5c2]" started-at="2023-12-15T20:41:53 EST" name="search" finished-at="2023-12-15T20:42:01 EST" duration-ms="8060" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method signature="addToCart()[pri:2, instance:com.seleniumDec.eCommerceWeb@75d4a5c2]" started-at="2023-12-14T18:36:10 EST" name="addToCart" finished-at="2023-12-14T18:36:23 EST" depends-on-methods="com.seleniumDec.eCommerceWeb.search" duration-ms="13215" status="PASS">
+        <test-method signature="addToCart()[pri:2, instance:com.seleniumDec.eCommerceWeb@75d4a5c2]" started-at="2023-12-15T20:42:01 EST" name="addToCart" finished-at="2023-12-15T20:42:17 EST" depends-on-methods="com.seleniumDec.eCommerceWeb.search" duration-ms="15908" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCart -->
-        <test-method signature="subtotal()[pri:3, instance:com.seleniumDec.eCommerceWeb@75d4a5c2]" started-at="2023-12-14T18:36:23 EST" name="subtotal" finished-at="2023-12-14T18:36:23 EST" depends-on-methods="com.seleniumDec.eCommerceWeb.addToCart" duration-ms="36" status="FAIL">
+        <test-method signature="subtotal()[pri:3, instance:com.seleniumDec.eCommerceWeb@75d4a5c2]" started-at="2023-12-15T20:42:17 EST" name="subtotal" finished-at="2023-12-15T20:42:17 EST" depends-on-methods="com.seleniumDec.eCommerceWeb.addToCart" duration-ms="37" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- subtotal -->
+        <test-method signature="checkout()[pri:4, instance:com.seleniumDec.eCommerceWeb@75d4a5c2]" started-at="2023-12-15T20:42:17 EST" name="checkout" finished-at="2023-12-15T20:42:29 EST" depends-on-methods="com.seleniumDec.eCommerceWeb.subtotal" duration-ms="11877" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//span[@data-bind='text: getValue()'][normalize-space()='$78.00']"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//tr[@class='grand totals']//span[@class='price']"}
   (Session info: chrome=120.0.6099.71)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [27c16dbd5be55a18f2f7f07099fd65e9, findElement {using=xpath, value=//span[@data-bind='text: getValue()'][normalize-space()='$78.00']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\mathu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53159}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53159/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 27c16dbd5be55a18f2f7f07099fd65e9]]>
+Command: [9c084a8936fc086f0584ebeae767473b, findElement {using=xpath, value=//tr[@class='grand totals']//span[@class='price']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\mathu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54246}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54246/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9c084a8936fc086f0584ebeae767473b]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@data-bind='text: getValue()'][normalize-space()='$78.00']"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//tr[@class='grand totals']//span[@class='price']"}
   (Session info: chrome=120.0.6099.71)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [27c16dbd5be55a18f2f7f07099fd65e9, findElement {using=xpath, value=//span[@data-bind='text: getValue()'][normalize-space()='$78.00']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\mathu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53159}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53159/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 27c16dbd5be55a18f2f7f07099fd65e9
+Command: [9c084a8936fc086f0584ebeae767473b, findElement {using=xpath, value=//tr[@class='grand totals']//span[@class='price']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\mathu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54246}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54246/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9c084a8936fc086f0584ebeae767473b
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -60,7 +64,7 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-at com.seleniumDec.eCommerceWeb.subtotal(eCommerceWeb.java:195)
+at com.seleniumDec.eCommerceWeb.checkout(eCommerceWeb.java:250)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -92,42 +96,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- subtotal -->
-        <test-method signature="checkout()[pri:4, instance:com.seleniumDec.eCommerceWeb@75d4a5c2]" started-at="2023-12-14T18:36:23 EST" name="checkout" finished-at="2023-12-14T18:36:23 EST" depends-on-methods="com.seleniumDec.eCommerceWeb.subtotal" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method com.seleniumDec.eCommerceWeb.checkout() on instance com.seleniumDec.eCommerceWeb@75d4a5c2 depends on not successfully finished methods 
-[com.seleniumDec.eCommerceWeb.subtotal() on instance com.seleniumDec.eCommerceWeb@75d4a5c2]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method com.seleniumDec.eCommerceWeb.checkout() on instance com.seleniumDec.eCommerceWeb@75d4a5c2 depends on not successfully finished methods 
-[com.seleniumDec.eCommerceWeb.subtotal() on instance com.seleniumDec.eCommerceWeb@75d4a5c2]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- checkout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.seleniumDec.eCommerceWeb@75d4a5c2]" started-at="2023-12-14T18:36:23 EST" name="tearDown" finished-at="2023-12-14T18:36:23 EST" duration-ms="245" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.seleniumDec.eCommerceWeb@75d4a5c2]" started-at="2023-12-15T20:42:29 EST" name="tearDown" finished-at="2023-12-15T20:42:29 EST" duration-ms="341" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -54,7 +54,7 @@ public class eCommerceWeb extends browserCl {
 	By cart_qty = By.xpath("//table[@id='shopping-cart-table']//span[@class='label']/following-sibling::input");
 	By cart_price = By.xpath("//table[@id='shopping-cart-table']//td[@class='col price']//span[@class='price']");
 	By cart_subtotal = By.xpath("//table[@id='shopping-cart-table']//td[@class='col subtotal']//span[@class='price']");
-	By cart_checkout_total = By.xpath("//span[@data-bind='text: getValue()'][normalize-space()='$78.00']");
+	By cart_checkout_total = By.xpath("//table[@class='data table totals']//tr[@class='grand totals']/td[@class='amount']");
 	//span[@data-bind='text: getValue()'][normalize-space()='$78.00']
 	//delete item cart page
 	By cart_del = By.xpath("//div[@class='actions-toolbar']//a[@title='Remove item']");
