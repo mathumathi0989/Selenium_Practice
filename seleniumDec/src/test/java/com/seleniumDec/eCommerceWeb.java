@@ -67,7 +67,7 @@ public class eCommerceWeb extends browserCl {
 	By ship_country = By.xpath("//select[@id='ULXYDSP']");
 	By ship_zip = By.xpath("//input[@id='LOVOU3V']");
 	By ship_phone = By.xpath("//input[@id='L8IVCQT']");
-	By ship_method = By.xpath(" //input[@name='ko_unique_1']");
+	By ship_method = By.xpath("//table[@class='table-checkout-shipping-method']//tr[@class='row'][1]/td[1]");
 	By ship_next = By.xpath("//span[normalize-space()='Next']");
 	By ship_total = By.xpath("//tr[@class='grand totals']//span[@class='price']");
 	By ship_place = By.xpath("//button[@title='Place Order']");
@@ -175,7 +175,7 @@ ex_size = driver.findElement(size).getText();
 
 
 @Test(priority=3, dependsOnMethods = "addToCart")
-public void subtotal() {
+public void subtotal() throws Exception {
 	 String[] lin = ccart_price.split("\\.");
 for(int i=0; i<lin.length; i++) {
 	 vval = lin[0];
@@ -193,6 +193,7 @@ cccart_subtotal = vvalu.substring(1);
 		 cart_subtotal_in = Integer.parseInt(cccart_subtotal);
 	Assert.assertEquals(cart_subtotal_in, cart_sub);	
 	
+	Thread.sleep(4000);
 	ccart_check_subtotal = driver.findElement(cart_checkout_total).getText();
 	String[] lind1 = ccart_check_subtotal.split("\\.");
 for(int i=0; i<lind1.length; i++) {
@@ -241,7 +242,9 @@ Verify Successful Checkout Button.
  driver.findElement(ship_phone).sendKeys(phone);
  
  }
-	driver.findElement(ship_method).isSelected();
+  Thread.sleep(2000);
+	
+ driver.findElement(ship_method).click();
  
  
  driver.findElement(ship_next).click();
