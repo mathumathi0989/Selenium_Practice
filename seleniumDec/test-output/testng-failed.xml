@@ -3,16 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.seleniumDec.eCommerceWeb">
+      <class name="com.seleniumDec.saucedemo">
         <methods>
-          <include name="addToCart"/>
           <include name="setup"/>
-          <include name="checkout"/>
           <include name="tearDown"/>
-          <include name="search"/>
-          <include name="subtotal"/>
+          <include name="productPage"/>
         </methods>
-      </class> <!-- com.seleniumDec.eCommerceWeb -->
+      </class> <!-- com.seleniumDec.saucedemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
