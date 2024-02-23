@@ -6,6 +6,7 @@ import java.util.Iterator;
 
 import org.apache.poi.sl.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -31,11 +32,17 @@ public class javaPracticeFeb {
 			
 		int cellCount =	sheet.getRow(i).getLastCellNum();
 			for(int j=0; j<cellCount; j++) {
-				String cell1 = sheet.getRow(i).getCell(j).getStringCellValue().toString() +"||";
-				
+				XSSFCell cell = sheet.getRow(i).getCell(j);
+				if (cell.getCellType() == CellType.STRING) {
+            String stringCellValue = cell.getStringCellValue();
+            System.out.print(stringCellValue  + "|");
+        } else if (cell.getCellType() == CellType.NUMERIC) {
+            int numericCellValue = (int) cell.getNumericCellValue();
+            System.out.print(numericCellValue + "|");
+        }
 
             }
-			System.out.println();
+		System.out.println();
 		}
 			
 			
