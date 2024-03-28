@@ -55,8 +55,38 @@ public class Mar28 {
 	
 		
 	}
+	
+	
+	public static void removeSpaces(String s) {
+		
+		s = s.replaceAll(" ", "");
+		System.out.println(s);
+		
+	}
+	
+	public static void palindrome(String s) {
+		//mathu
+
+		StringBuilder s1 = new StringBuilder(s);
+		s1.reverse();
+	
+		if(s.contentEquals(s1)){
+			System.out.println(s +" is palindrome");
+		}
+		else System.out.println(s +" is not palindrome");
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	public static void main(String[] args) {
 
+	
 		/*
 //Code 3: 3: Write a function to reverse a number in Java.
 		
@@ -76,8 +106,25 @@ reverseNum("");
 		int intArr[] = {2,3,1,23,4,123,234,6,4};
 		maxValues(intArr);
 		
+		
+		
+//Code 6: Write Java code to get rid of multiple spaces from a string
+		
+		removeSpaces(" My name is Mathu Mathi !");
+	
+	
+	
+		
+//Code 7: Write Java code to identify a number as Palindrome.
+		
+		palindrome("mathu");
+		palindrome("madam");
 			*/
 		
+		
+		
 	}
+
+
 
 }
