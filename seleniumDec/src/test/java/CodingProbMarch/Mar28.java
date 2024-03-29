@@ -77,12 +77,34 @@ public class Mar28 {
 		
 	}
 	
+	public static void swapWithoutAnyTemp(int num1, int num2) {
+		
+		System.out.println("a value is " + num1);
+		System.out.println("b value is " + num2);
+		num1 = num1 + num2;
+		num2 = num1 - num2;
+		num1 = num1 - num2;
+	
+		System.out.println("a value is " +num1);
+		System.out.println("b value is " +num2);
+	}
 	
 	
+	public static void reverseStringWith(String word) {
+		
+		StringBuffer sb = new StringBuffer(word);
+		sb = sb.reverse();
+		System.out.println(sb);
+	}
 	
-	
-	
-	
+	public static void reverseStringWithout(String word) {
+		String s1 = "";
+		for(int i=word.length()-1; i>=0; i--) {
+			s1 = s1 + word.charAt(i);
+		}
+		System.out.println(s1);
+		
+	}
 	
 	public static void main(String[] args) {
 
@@ -119,8 +141,19 @@ reverseNum("");
 		
 		palindrome("mathu");
 		palindrome("madam");
-			*/
 		
+		
+//Code 8: Write Java code to swap two numbers without using a temporary variable.
+		
+		swapWithoutAnyTemp(2,3);
+		
+		
+//Code 9: Write a Java program to demonstrate string reverse with and without the StringBuffer class.
+	
+		reverseStringWith("mathi");
+		
+		reverseStringWithout("mathi");
+		*/
 		
 		
 	}
