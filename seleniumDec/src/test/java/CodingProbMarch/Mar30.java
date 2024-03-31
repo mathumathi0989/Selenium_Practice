@@ -25,7 +25,19 @@ public class Mar30 {
 		System.out.println(result);
 	}
 	
-	
+	public static void reverseWords(String sent) {
+		
+		String[] al = sent.split(" ");
+		String result = "";
+		
+		for(int i=al.length-1; i>=0; i--) {
+			
+			result = result + al[i] + " ";
+			
+		}
+		System.out.println(result);
+		
+	}
 	
 	
 	
@@ -45,6 +57,8 @@ public class Mar30 {
 		reverseArray(arr);
 //3 - Reverse words. Write a method that will take a string as an argument. 
 		//The method will reverse the position of words and return it.		
+		reverseWords("My name is Mathumathi");
+		
 		
 		
 	}
