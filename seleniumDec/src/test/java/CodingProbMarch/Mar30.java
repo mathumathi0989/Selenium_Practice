@@ -39,7 +39,48 @@ public class Mar30 {
 		
 	}
 	
+public static void isPrime(int num) {
+	boolean prime = true;
+	for(int i=2; i<=num/2; i++) {
+		
+		if(num%i==0) {
+			prime = false;
+			break;
+				}
+		}
 	
+	if(prime==true) {
+		System.out.println(num + " is a prime number");
+		
+	}
+	else System.out.println(num + " is not a prime number");	
+}
+
+public static void primeList(int count) {
+int found = 0;
+int num = 2;
+while(found<count) {
+	boolean isprim = true;
+	for(int i=2; i<=num/2; i++) {
+			if(num%i ==0) {
+				isprim = false;
+				break;
+			}
+		}
+		
+		if(isprim) {
+			System.out.print(num);
+			System.out.print(" ");
+			found++;
+		}
+		num++;
+		
+	}
+	
+}
+	
+	
+
 	
 	
 	
@@ -58,9 +99,13 @@ public class Mar30 {
 //3 - Reverse words. Write a method that will take a string as an argument. 
 		//The method will reverse the position of words and return it.		
 		reverseWords("My name is Mathumathi");
-		
-		
-		
+
+//4 - Prime number. A prime number is a number that can only be divided by itself and 1 without remainder.
+	isPrime(7);
+	isPrime(41);
+	isPrime(60);
+
+		primeList(100);
 	}
 
 }
