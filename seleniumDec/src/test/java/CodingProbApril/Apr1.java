@@ -60,18 +60,30 @@ System.out.println(ar.get(1) + " is second min value in the array");
 System.out.println(ar.get(ar.size()-2) + " is second max value in the array");
 }
 
-
+public static void swapWithoutTemp(int a, int b) {
+	
+	System.out.println("Before swapping : " + a);
+	System.out.println("Before swapping : " + b);
+	
+	a = a + b;
+	b = a - b;
+	a = a - b ;
+	
+	System.out.println("After swapping : " + a );
+	System.out.println("After swapping : " + b );
+	
+	
+}
 
 public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	/*
+
 //Code 1: String palindrome. A palindrome is a word, phrase, number, or 
 		//sequence of words that reads the same backward as forward.
 		
 		isPalindromString("madam");
 		isPalindromString("mathu");
 
-		
 		
 //Code 2: Number palindrome. A palindrome is a word, phrase, number, or 
 	//sequence of words that reads the same backward as forward.		
@@ -85,7 +97,7 @@ public static void main(String[] args) {
 		int[] num = {23,3,455,2,6,1453,3};
 		maxMinArray(num);
 
-		*/
+		
 //Code 4: Find the second min/max number from an array. 
 	//Write a method that accepts an int array as an argument and 
 	//returns a second or n min/max number from the given array.
@@ -93,10 +105,12 @@ public static void main(String[] args) {
 		int[]num1 = {2,24,75,2638,1,78,92};
 		secondMaxMinArray(num1);
 
+
+	
 //Code 5: Swap values of two variables without direct reassignment and 
 	//without creating any extra variables.
 		
-		
+	swapWithoutTemp(2,7);
 		
 		
 		
