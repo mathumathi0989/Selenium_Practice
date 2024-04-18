@@ -1,7 +1,29 @@
 package CodingProbApril;
 
+import java.util.Scanner;
+
 public class Apr16 {
 
+	
+	public static void removeChar(String s) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter any character to remove from the string : ");
+		char a = sc.next().charAt(0);
+		char b = ' ' ;
+		StringBuilder s1 = new StringBuilder();
+		for(int i=0;i<s.length();i++) {
+			if(s.charAt(i)!=a) {
+				
+				s1.append(s.charAt(i));
+			}
+		}
+		System.out.println(s1.toString());
+		
+	}
+	
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 /*
@@ -14,9 +36,14 @@ Given string str, How do you find the longest palindromic substring in str? (sol
 How to convert a byte array to String? (solution)
 how to remove the duplicate character from String? (solution)
 How to find the maximum occurring character in given String? (solution)
+
 How do you remove a given character from String? (solution)
 
  */
+		
+		removeChar("mathu");
+		removeChar("mathumathi");
+		
 	}
 
 }
