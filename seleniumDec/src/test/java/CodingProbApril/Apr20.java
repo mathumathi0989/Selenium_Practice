@@ -1,9 +1,84 @@
 package CodingProbApril;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class Apr20 {
 
+	
+	public static String string1(String s) {
+		String result = "";
+		for(int i=s.length()-1; i>=0; i--) {
+			result = result + s.charAt(i);
+		}
+		System.out.println(result);
+		return result;
+	}
+	
+	public static int string2_1(int[] num) {
+		
+		int result = 0;
+		List l = new ArrayList<>();
+		
+		for(int i = 0; i<num.length; i++) {
+			l.add(num[i]);
+		}
+		Collections.sort(l);
+		Collections.reverse(l);
+		
+		System.out.println(l.get(0));
+		return result;
+		
+	}
+	
+	public static String string2_2(String[] s) {
+		
+		String result = null;
+		List l = new ArrayList<>();
+		
+		for(int i=0; i<s.length;i++) {
+			l.add(s[i]);
+		}
+		Collections.sort(l);
+		Collections.reverse(l);
+		
+		System.out.println(l.get(0));
+		return result;
+		
+	}
+	
+	public static boolean string3(String s1, String s2) {
+		String s3 = "";
+	for(int i=s1.length()-1; i>=0; i--) {
+		s3 = s3 + s1.charAt(i);
+	}
+		System.out.println(s3);
+		System.out.println(s2);
+		if(s3.equalsIgnoreCase(s2)) {
+			System.out.println("given strings " +s1 +" and "+ s2 + " are palindrome");
+			return true;
+		}
+		else System.out.println("given strings " +s1 +" and "+ s2 + " are not palindrome");
+		
+		return false;
+		
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		string1("mathu");
+		int[] num = {23,3,454,90,8,3456,75};
+		string2_1(num);
+		String[] s = {"a","ant","mathu","zebra","thanya","gurdev","dheena"};
+		string2_2(s);
+		string3("mathu", "uhtam");
+		string3("mom", "amma");
+		string3("god", "dog");
+		
+		
+		
 /*
 1. Reverse a String:
   Write a Java program to reverse a given string.
@@ -11,6 +86,7 @@ public class Apr20 {
   Find and print the largest element in an array.
 3. Check for Palindrome:
   Determine if a given string is a palindrome (reads the same backward as forward).
+
 4. Factorial Calculation:
   Write a function to calculate the factorial of a number.
 5. Fibonacci Series:
