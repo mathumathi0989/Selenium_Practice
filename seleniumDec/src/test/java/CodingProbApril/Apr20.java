@@ -65,9 +65,35 @@ public class Apr20 {
 		return false;
 		
 	}
+	
+	public static int string4(int n) {
+		
+		//4! = 4*3*2*1
+		int result =1;
+		for(int i=n; i>0; i--) {
+			result = result *n;
+		n = n -1;
+		}
+		System.out.println(result);
+		return result;
+		
+	}
+	
+	
+	public static int string5(int n) {
+		int result = 0;
+		//1,1,2,3,5,8,13,21
+		
+		
+		
+		System.out.println(result);
+		return result;
+	}
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		/*
 		string1("mathu");
 		int[] num = {23,3,454,90,8,3456,75};
 		string2_1(num);
@@ -76,8 +102,9 @@ public class Apr20 {
 		string3("mathu", "uhtam");
 		string3("mom", "amma");
 		string3("god", "dog");
+		*/
 		
-		
+		string4(5);
 		
 /*
 1. Reverse a String:
@@ -86,9 +113,9 @@ public class Apr20 {
   Find and print the largest element in an array.
 3. Check for Palindrome:
   Determine if a given string is a palindrome (reads the same backward as forward).
-
 4. Factorial Calculation:
   Write a function to calculate the factorial of a number.
+
 5. Fibonacci Series:
   Generate the first n numbers in the Fibonacci sequence.
 6. Check for Prime Number:
