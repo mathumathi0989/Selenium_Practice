@@ -82,11 +82,23 @@ public class Apr20 {
 	
 	public static int string5(int n) {
 		int result = 0;
-		//1,1,2,3,5,8,13,21
+		//0,1,1,2,3,5,8,13,21
+		
+		int n1 = 0;
+		int n2 = 1;
+		System.out.print(n1);
+		System.out.print(" ");
+		System.out.print(n2);
+		System.out.print(" ");
+		for(int i=2; i<n; i++) {
+			result = n1 + n2; //1
+			System.out.print(result);
+			System.out.print(" ");
+			n1 = n2;
+			n2 = result;
+		}
 		
 		
-		
-		System.out.println(result);
 		return result;
 	}
 	
@@ -102,10 +114,11 @@ public class Apr20 {
 		string3("mathu", "uhtam");
 		string3("mom", "amma");
 		string3("god", "dog");
+			string4(5);
 		*/
 		
-		string4(5);
-		
+	
+		string5(10);
 /*
 1. Reverse a String:
   Write a Java program to reverse a given string.
@@ -115,7 +128,6 @@ public class Apr20 {
   Determine if a given string is a palindrome (reads the same backward as forward).
 4. Factorial Calculation:
   Write a function to calculate the factorial of a number.
-
 5. Fibonacci Series:
   Generate the first n numbers in the Fibonacci sequence.
 6. Check for Prime Number:
